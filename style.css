@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 html,
@@ -10,85 +11,214 @@ body {
     width: 100vw;
 }
 
-.navbar img {
-    height: 70px;
-}
-
-.navbar {
+.navbar{
+    padding: 30px;
+    height: 8.5vh;
+    width: 100%;
+    /* border-bottom:2px solid #000B58; */
+    background-color: #5497ad;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(49, 122, 122);
-    padding: 0px 40px;
     align-items: center;
 }
 
-.navbar ul {
-    list-style: none;
+.logo{
+    height: auto;
+    width: 150px;
+    margin-left: 30px;
+}
+
+.nav-links{
     display: flex;
-    gap: 50px;
-    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size:1.1rem;
 }
 
-ul li a {
+.nav-links li a{
     text-decoration: none;
+    padding: 7px 10px;
+    border-radius:30px;
+    text-align: center;
     color: black;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 45px;
+    transition: all 0.3s  ease;
 }
 
-a:hover{
-    background-color:aquamarine ;
+.nav-links li a:hover{
+    background-color:#aab2c8;
 }
 
-h4{
-    background-color: azure;
-    padding: 10px 10px;
-    border-radius: 50px;
+.username{
+    background-color: #F5EFE6;
+    padding: 10px;
+    border-radius: 30px;
     cursor: pointer;
 }
-.hero{
-    /* height: 100vh;
-    width: 100vw; */
+
+.hero-section{
     display: flex;
+    height: 76vh;
     justify-content: center;
     align-items: center;
 }
-.details{
+
+.details h1{
+    font-size: 3.5rem;
     position: relative;
-    /* top: -10px; */
-    left: -50px;
+    left: -100px;
+    margin-bottom: 20px;
+    letter-spacing:2px;
 }
-img{
-    height: 700px;
+
+.details span{
+    color: #320A6B;
+}
+
+.details p{
     position: relative;
-    /* top: -30px; */
+    left: -100px;
+    font-size: 1.2rem;
+}
+
+.details button{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #3396D3;
+    width: 250px;
+    position: relative;
+    left: -100px;
+    font-size: medium;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.details button:hover{
+    transform: translateY(-5px);
+    background-color: #2e8bc5;
+}
+.hero-image{
+    height: 600px;
+    position: relative;
     right: -80px;
 }
 
-h1{
-    font-size: 4rem;
-    line-height:0.9;
-    margin-bottom: 30px;
+.overview-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #A3CCDA;
+    height: 14vh;
+    align-items: center;
 }
 
-p{
-    font-size: 20px;
-    margin-bottom: 40px;
-    font-family: cursive;
+.overview-section h2{
+    font-size: 2rem;
 }
 
-span{
-    color: rgb(14, 131, 131);
+.overview-section div h3{
+    font-size: 1.5rem;
 }
 
-button{
-    background-color: rgb(14, 131, 131);
-    padding: 20px 40px;
-    font-size: 18px;
-    border-radius: 40px;
-    outline: none;
+.booking-section{
+    padding: 70px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-div{
+    display: flex;
+    background-color: #fff;
+    height: 80vh;
+    padding-right: 30px;
+    border-radius: 30px;
+}
+
+.right-div{
+    background-color: #fff;
+    height: 80vh;
+    width: 40vw;
+    border-radius: 30px;
+}
+
+.services h3{
+    margin: 20px 0 0 25px;
+    font-size: 1.5rem;
+}
+
+.services .instruction{
+    margin: 10px 0 0 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.services-list div{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.services-list{
+    margin: 20px 0 0 10px;
+    list-style: none;
+}
+
+.services-list button{
     border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: darkgreen;
+    font-weight: 700;
     cursor: pointer;
-    color: white;
+}
+
+.more-info{
+    margin: 10px 0 0 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    color: blue;
+}
+
+.more-info i{
+    color:blue;
+    margin-right: 5px ;
+}
+
+li span{
+    color: blueviolet;
+    font-weight: 700;
+}
+
+table, th, td{
+    border: 1px solid rgba(0, 0, 0, 0.134);
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+}
+
+th{
+    background: #f2f2f2;
+}
+
+.cart h3{
+    margin: 20px 0 20px 25px;
+    font-size: 1.5rem;
+}
+
+.cart{
+    display: block;
+}
+
+#cartTable{
+    margin: 0 auto;
+    width: 100%;
 }
