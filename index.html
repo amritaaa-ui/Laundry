@@ -19,9 +19,9 @@
         <nav class="navbar">
             <img src="logo.png" alt="logo" class="logo">
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about-us">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
             <h4 class="username">Username</h4>
@@ -30,12 +30,12 @@
 
 
     <!-- hero section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <div class="details">
             <h1>Revitalize Your <br> Clothes with Expert <br> <Span>Laundry Services!</Span></h1>
             <p>From premium dry cleaning to swift wash and fold, we <br> deliver care and convenience. Schedule a
                 pickup and <br> rediscover the freshness of your clothes today!</p>
-            <button>Book a Service Today!</button>
+            <button onclick="document.getElementById('book-now').scrollIntoView()">Book a Service Today!</button>
         </div>
         <div>
             <img src="wm.png" alt="hero-image" class="hero-image">
@@ -62,7 +62,7 @@
 
 
     <!-- Booking Service section -->
-    <section class="booking-section">
+    <section class="booking-section" id="services">
         <div class="left-div">
             <div class="services">
                 <div>
@@ -102,9 +102,10 @@
                 </div>
             </div>
         </div>
+
         <div class="right-div">
             <div class="cart">
-                <h3>Added Items</h3>
+                <h3 class="add">Added Items</h3>
                 <table id="cartTable">
                     <thead>
                         <tr>
@@ -114,24 +115,60 @@
                     </thead>
                     <tbody id="cartBody"></tbody>
                 </table>
+                <p id="cartMessage" style="text-align: center; color: gray; margin-top: 40px; margin-bottom:30px;">No
+                    added items</p>
+                <h3 class="totalPrice">Total Price: <span id="totalPrice">₹0</span></h3>
             </div>
 
-            <h3>Total Price: <span id="totalPrice">₹0</span></h3>
-
-            
             <div class="book-now">
                 <h3>Book Now</h3>
-                <div>
-                    <label for="name">Full Name</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                    <label for="ph-num">Phone Number</label>
-                    <input type="number" name="ph-num" id="ph-num">
-                </div>
-                <button>Book Now</button>
+                <form action="">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                    </div>
+                    <div id="contact">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter valid email" required>
+                        </div>
+                        <div>
+                            <label for="ph-num">Phone Number</label>
+                            <input type="tel" name="ph-num" id="ph-num" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                </form>
+                <div id="toast-container"></div>
+                <button id="book-now" onclick="showToast('Thank You for Booking our service!')">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Quality description section -->
+    <section class="about-us" id="about-us">
+        <div class="features-container">
+            <div>
+                <i class="fa-solid fa-dollar-sign"></i>
+                <h2>Premium Services</h2>
+                <p>Elevate your wardrobe with out meticulous dry cleaning, ensuring garments look and feel as good as
+                    new. </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-headset"></i>
+                <h2>Quick Support</h2>
+                <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-truck"></i>
+                <h2>Hassle Free Delivery</h2>
+                <p>Enjoy seemless serivce with our convenient pickup and delivery options, tailored to your schedule.
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-tag"></i>
+                <h2>Affordale Prices</h2>
+                <p>Experience exceptional care without breaking the bank - our affordable prices make laundry stress-free.</p>
             </div>
         </div>
     </section>
