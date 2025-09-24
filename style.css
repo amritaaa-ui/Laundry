@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-.navbar{
+.navbar {
     padding: 30px;
     height: 8.5vh;
     width: 100%;
@@ -23,65 +23,65 @@ body {
     align-items: center;
 }
 
-.logo{
+.logo {
     height: auto;
     width: 150px;
     margin-left: 30px;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
     gap: 40px;
-    font-size:1.1rem;
+    font-size: 1.1rem;
 }
 
-.nav-links li a{
+.nav-links li a {
     text-decoration: none;
     padding: 7px 10px;
-    border-radius:30px;
+    border-radius: 30px;
     text-align: center;
     color: black;
-    transition: all 0.3s  ease;
+    transition: all 0.3s ease;
 }
 
-.nav-links li a:hover{
-    background-color:#aab2c8;
+.nav-links li a:hover {
+    background-color: #aab2c8;
 }
 
-.username{
+.username {
     background-color: #F5EFE6;
     padding: 10px;
     border-radius: 30px;
     cursor: pointer;
 }
 
-.hero-section{
+.hero-section {
     display: flex;
     height: 76vh;
     justify-content: center;
     align-items: center;
 }
 
-.details h1{
+.details h1 {
     font-size: 3.5rem;
     position: relative;
     left: -100px;
     margin-bottom: 20px;
-    letter-spacing:2px;
+    letter-spacing: 2px;
 }
 
-.details span{
+.details span {
     color: #320A6B;
 }
 
-.details p{
+.details p {
     position: relative;
     left: -100px;
     font-size: 1.2rem;
 }
 
-.details button{
+.details button {
     margin-top: 20px;
     padding: 20px;
     border-radius: 30px;
@@ -96,17 +96,18 @@ body {
     cursor: pointer;
 }
 
-.details button:hover{
+.details button:hover {
     transform: translateY(-5px);
     background-color: #2e8bc5;
 }
-.hero-image{
+
+.hero-image {
     height: 600px;
     position: relative;
     right: -80px;
 }
 
-.overview-section{
+.overview-section {
     display: flex;
     justify-content: space-around;
     margin: 10px 0;
@@ -116,15 +117,15 @@ body {
     align-items: center;
 }
 
-.overview-section h2{
+.overview-section h2 {
     font-size: 2rem;
 }
 
-.overview-section div h3{
+.overview-section div h3 {
     font-size: 1.5rem;
 }
 
-.booking-section{
+.booking-section {
     padding: 70px;
     height: 100vh;
     width: 100vw;
@@ -135,7 +136,7 @@ body {
     gap: 10px;
 }
 
-.left-div{
+.left-div {
     display: flex;
     background-color: #fff;
     height: 80vh;
@@ -143,37 +144,37 @@ body {
     border-radius: 30px;
 }
 
-.right-div{
+.right-div {
     /* background-color: #fff; */
     height: 80vh;
     width: 30vw;
     /* border-radius: 30px; */
 }
 
-.services h3{
+.services h3 {
     margin: 20px 0 0 25px;
     font-size: 1.5rem;
 }
 
-.services .instruction{
+.services .instruction {
     margin: 10px 0 0 25px;
     padding-bottom: 30px;
     border-bottom: 1px solid #ccc;
 }
 
-.services-list div{
+.services-list div {
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
     padding: 25px 0;
 }
 
-.services-list{
+.services-list {
     margin: 20px 0 0 10px;
     list-style: none;
 }
 
-.services-list button{
+.services-list button {
     border: none;
     padding: 10px 20px;
     border-radius: 30px;
@@ -182,24 +183,26 @@ body {
     cursor: pointer;
 }
 
-.more-info{
+.more-info {
     margin: 10px 0 0 25px;
     padding-top: 15px;
     border-top: 1px solid #ccc;
     color: blue;
 }
 
-.more-info i{
-    color:blue;
-    margin-right: 5px ;
+.more-info i {
+    color: blue;
+    margin-right: 5px;
 }
 
-li span{
+li span {
     color: blueviolet;
     font-weight: 700;
 }
 
-table, th, td{
+table,
+th,
+td {
     border: 1px solid rgba(0, 0, 0, 0.134);
     border-collapse: collapse;
     padding: 8px;
@@ -208,98 +211,97 @@ table, th, td{
 
 
 
-th{
+th {
     background: #f2f2f2;
 }
 
-.add{
+.add {
     margin-left: 15px;
     padding: 10px 0;
     font-size: 1.5rem;
 }
 
-.cart{
+.cart {
     display: block;
     border-radius: 30px;
     background-color: #fff;
     height: 45vh;
 }
 
-#cartTable{
+#cartTable {
     margin: 0 auto;
     width: 95%;
 }
 
-.book-now{
+.book-now {
     margin-top: 10px;
     border-radius: 30px;
     background-color: #fff;
     height: 34vh;
 }
 
-.totalPrice{
+.totalPrice {
     margin-top: 5px;
     margin-left: 15px;
     font-size: 1rem;
     color: green;
 }
 
-.book-now h3{
+.book-now h3 {
     margin: 0 15px 0 15px;
     padding: 10px;
     font-size: 1.5rem;
     border-bottom: 1px solid gray;
 }
 
-form{
+form {
     margin: 30px;
 }
 
-form div{
+form div {
     display: flex;
     flex-direction: column;
 }
 
-#contact{
+#contact {
     display: flex;
     flex-direction: row;
-    gap:20px;
+    gap: 20px;
 }
 
-input[type = text]{
+input[type=text] {
     margin-bottom: 30px;
-    height: 25px;
-    padding: 5px;
-}
-
-
-input[type = email],
-input[type = tel]{
     height: 30px;
-    width: 100%;
     padding: 5px;
 }
 
-label{
+
+input[type=email],
+input[type=tel] {
+    height: 30px;
+    padding: 5px;
+}
+
+label {
     margin-bottom: 3px;
 }
 
-.book-now button{
+.book-now button {
     position: relative;
-    left:35%;
-    margin: 10px  auto;
-    padding:10px 30px;
-    border-radius:30px;
+    left: 35%;
+    margin: 10px auto;
+    padding: 10px 30px;
+    border-radius: 30px;
     border: none;
     outline: none;
     background-color: #2e8bc5;
     font-weight: 700;
-    width: 150px ;
+    width: 150px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.book-now button:hover{
+.book-now button:hover {
     transform: translateY(-5px);
     background-color: #3396D3;
 }
@@ -315,7 +317,7 @@ label{
 }
 
 .toast {
-    background-color:#fff;
+    background-color: #fff;
     color: black;
     padding: 15px;
     border-radius: 10px;
@@ -330,4 +332,70 @@ label{
     opacity: 1;
 }
 
-.about-us
+.about-us {
+    height: 45vh;
+    padding: 100px;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    text-align: center;
+}
+
+.features-container i {
+    font-size: 350%;
+    margin-bottom: 15px;
+}
+
+.features-container h2 {
+    margin-bottom: 10px;
+}
+
+.newsletter {
+    height: 30vh;
+    padding: 50px;
+    background-color: #2e8bc5;
+}
+
+.newsletter .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    text-align: center;
+}
+
+.newsletter form{
+    align-items: start;
+}
+
+#name-news,
+#email-news {
+    height: 50px;
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: azure;
+}
+
+.newsletter h2 {
+    margin-right: 40px;
+    font-size: 2.8rem;
+    text-align: left;
+    color: white;
+}
+
+.newsletter button {
+    border: none;
+    padding: 10px 60px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    position: relative;
+    margin-top: -10px;
+    margin-left: -420px;
+    color: #2e8bc5;
+}
