@@ -9,6 +9,7 @@ html,
 body {
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .navbar{
@@ -111,7 +112,7 @@ body {
     margin: 10px 0;
     padding: 10px;
     background-color: #A3CCDA;
-    height: 14vh;
+    height: 15vh;
     align-items: center;
 }
 
@@ -143,10 +144,10 @@ body {
 }
 
 .right-div{
-    background-color: #fff;
+    /* background-color: #fff; */
     height: 80vh;
-    width: 40vw;
-    border-radius: 30px;
+    width: 30vw;
+    /* border-radius: 30px; */
 }
 
 .services h3{
@@ -205,21 +206,128 @@ table, th, td{
     text-align: center;
 }
 
+
+
 th{
     background: #f2f2f2;
 }
 
-.cart h3{
-    margin: 20px 0 20px 25px;
+.add{
+    margin-left: 15px;
+    padding: 10px 0;
     font-size: 1.5rem;
 }
 
 .cart{
     display: block;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 45vh;
 }
 
 #cartTable{
     margin: 0 auto;
-    width: 100%;
+    width: 95%;
 }
 
+.book-now{
+    margin-top: 10px;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 34vh;
+}
+
+.totalPrice{
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 1rem;
+    color: green;
+}
+
+.book-now h3{
+    margin: 0 15px 0 15px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid gray;
+}
+
+form{
+    margin: 30px;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+
+input[type = text]{
+    margin-bottom: 30px;
+    height: 25px;
+    padding: 5px;
+}
+
+
+input[type = email],
+input[type = tel]{
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+}
+
+label{
+    margin-bottom: 3px;
+}
+
+.book-now button{
+    position: relative;
+    left:35%;
+    margin: 10px  auto;
+    padding:10px 30px;
+    border-radius:30px;
+    border: none;
+    outline: none;
+    background-color: #2e8bc5;
+    font-weight: 700;
+    width: 150px ;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-now button:hover{
+    transform: translateY(-5px);
+    background-color: #3396D3;
+}
+
+
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.toast {
+    background-color:#fff;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border: 2px solid red;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.about-us
