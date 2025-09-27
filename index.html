@@ -35,7 +35,7 @@
             <h1>Revitalize Your <br> Clothes with Expert <br> <Span>Laundry Services!</Span></h1>
             <p>From premium dry cleaning to swift wash and fold, we <br> deliver care and convenience. Schedule a
                 pickup and <br> rediscover the freshness of your clothes today!</p>
-            <button onclick="document.getElementById('book-now').scrollIntoView()">Book a Service Today!</button>
+            <button>Book a Service Today!</button>
         </div>
         <div>
             <img src="wm.png" alt="hero-image" class="hero-image">
@@ -222,6 +222,32 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("PP_qp2wpVWe0o7y1B");
+        })();
+    </script>
+
+    <button id="book-now">Book Now</button>
+
+    <script>
+        document.getElementById("book-now").addEventListener("click", function () {
+            emailjs.send("service_t6n0y5i", "template_5sb54jc", {
+                to_name: "Amrita",       // Your name
+                from_name: "Website User",
+                message: "Thank you for booking our service!"
+            })
+                .then(function (response) {
+                    alert("Confirmation email sent!");
+                }, function (error) {
+                    alert("Oops, email failed. You probably typed something wrong");
+                    console.log("FAILED...", error);
+                });
+        });
+    </script>
+
+
 </body>
 
 </html>
