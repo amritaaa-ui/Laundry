@@ -90,7 +90,7 @@
                             <li>🧩Leather & Suede Cleaning - <span>₹999.00</span></li><button
                                 onclick="addToCart(this, 'Leather & Suede Cleaning' , 999.00)">Add To Cart
                                 +</button>
-                        </div class="service">
+                        </div>
                         <div class="service">
                             <li>👗Wedding Dress Cleaning - <span>₹2800.00</span></li><button
                                 onclick="addToCart(this, 'Wedding Dress Cleaning' , '2800.00')">Add To Cart
@@ -113,10 +113,14 @@
                             <th>Price</th>
                         </tr>
                     </thead>
-                    <tbody id="cartBody"></tbody>
+                    <tbody id="cartBody">
+                        <tr class="empty-row">
+                            <td colspan="2" style="text-align: center; color: gray;">
+                                No items added yet
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
-                <p id="cartMessage" style="text-align: center; color: gray; margin-top: 40px; margin-bottom:30px;">No
-                    added items</p>
                 <h3 class="totalPrice">Total Price: <span id="totalPrice">₹0</span></h3>
             </div>
 

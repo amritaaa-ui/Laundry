@@ -1,31 +1,53 @@
 function addToCart(button, item, price) {
-    let cartTable = document.getElementById("cartTable");
+    let cartBody = document.getElementById("cartBody"); // tbody not whole table
 
     if (button.innerText === "Add To Cart +") {
-        let row = cartTable.insertRow();
-        row.insertCell(0).innerText = item;
-        row.insertCell(1).innerText = "₹" + price;
+        // remove empty row if exists
+        let emptyRow = cartBody.querySelector(".empty-row");
+        if (emptyRow) {
+            emptyRow.remove();
+        }
+
+        // add new row
+        let row = cartBody.insertRow();
         row.setAttribute("data-item", item);
         row.setAttribute("data-price", price);
 
+        row.insertCell(0).innerText = item;
+        row.insertCell(1).innerText = "₹" + price;
+
+        // update button
         button.innerText = "Remove from Cart -";
         button.style.color = "red";
     } else {
-        let rows = cartTable.rows;
-        for (let i = 1; i < rows.length; i++) {
+        // remove row
+        let rows = cartBody.rows;
+        for (let i = 0; i < rows.length; i++) {
             if (rows[i].getAttribute("data-item") === item) {
-                cartTable.deleteRow(i);
+                cartBody.deleteRow(i);
                 break;
             }
         }
+
+        // restore button
         button.innerText = "Add To Cart +";
         button.style.color = "darkgreen";
+
+        // if cart empty → show message row
+        if (cartBody.rows.length === 0) {
+            let emptyRow = cartBody.insertRow();
+            emptyRow.classList.add("empty-row");
+            let cell = emptyRow.insertCell(0);
+            cell.colSpan = 2;
+            cell.style.textAlign = "center";
+            cell.style.color = "gray";
+            cell.innerText = "No items added yet";
+        }
     }
 
-
     calculateTotal();
-    updateCartMessage();
 }
+
 
 function calculateTotal() {
 
@@ -43,17 +65,6 @@ function calculateTotal() {
 
 
     document.getElementById('totalPrice').textContent = `₹${total.toFixed(2)}`;
-}
-
-function updateCartMessage() {
-    const cartTable = document.getElementById("cartTable");
-    const cartMessage = document.getElementById("cartMessage");
-
-    if (cartTable.rows.length <= 1) {
-        cartMessage.style.display = "block"; 
-    } else {
-        cartMessage.style.display = "none"; 
-    }
 }
 
 

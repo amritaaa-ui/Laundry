@@ -231,6 +231,7 @@ th {
 #cartTable {
     margin: 0 auto;
     width: 95%;
+    height: 75%;
 }
 
 .book-now {
@@ -241,10 +242,11 @@ th {
 }
 
 .totalPrice {
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 15px;
     font-size: 1rem;
     color: green;
+    position: sticky;
 }
 
 .book-now h3 {
