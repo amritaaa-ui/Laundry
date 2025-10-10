@@ -86,6 +86,28 @@ function showToast(message) {
 
         setTimeout(() => {
             container.removeChild(toast);
-        }, 500); 
+        }, 500);
     }, 3000);
 }
+
+
+(function () {
+    emailjs.init("PP_qp2wpVWe0o7y1B");
+})();
+
+
+
+
+document.getElementById("book-now").addEventListener("click", function () {
+    emailjs.send("service_t6n0y5i", "template_5sb54jc", {
+        to_name: "Amrita",       // Your name
+        from_name: "Website User",
+        message: "Thank you for booking our service!"
+    })
+        .then(function (response) {
+            alert("Confirmation email sent!");
+        }, function (error) {
+            alert("Oops, email failed. You probably typed something wrong");
+            console.log("FAILED...", error);
+        });
+});
