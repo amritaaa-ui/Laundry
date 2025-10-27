@@ -72,7 +72,7 @@ body {
 }
 
 .details span {
-    color: #320A6B;
+    color: #3396D3;
 }
 
 .details p {
@@ -94,6 +94,7 @@ body {
     font-weight: 700;
     transition: all 0.5s ease;
     cursor: pointer;
+    color: white;
 }
 
 .details button:hover {
@@ -112,8 +113,9 @@ body {
     justify-content: space-around;
     margin: 10px 0;
     padding: 10px;
-    background-color: #A3CCDA;
+    background-color: #5497ad;
     height: 15vh;
+    color: #fff;
     align-items: center;
 }
 
@@ -142,7 +144,7 @@ body {
     height: 80vh;
     padding-right: 30px;
     border-radius: 30px;
-    overflow: auto;
+
 }
 
 .right-div {
@@ -159,7 +161,7 @@ body {
 
 .services .instruction {
     margin: 10px 0 0 25px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -170,9 +172,15 @@ body {
     padding: 25px 0;
 }
 
+.services{
+    height: 1vh;
+}
+
 .services-list {
     margin: 20px 0 0 10px;
     list-style: none;
+    height: 55vh;
+    overflow-y: scroll;
 }
 
 .services-list button {
@@ -185,10 +193,9 @@ body {
 }
 
 .more-info {
-    margin-top: -10px;
+    margin-top: 10px;
     margin-left: 20px;
     padding: 10px;
-    border-top: 1px solid #ccc;
     color: blue;
 }
 
@@ -239,7 +246,7 @@ th {
     border-collapse: collapse;
     height: 35vh;
     overflow-y: auto;
-    display: block; 
+    display: block;
     border: none;
 }
 
@@ -330,6 +337,7 @@ label {
     width: 150px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: white;
 }
 
 .book-now button:hover {
@@ -422,15 +430,17 @@ label {
 
 .newsletter button {
     border: none;
+    height: 50px;
     padding: 10px 60px;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 5px;
     position: relative;
     margin-top: -10px;
-    margin-left: -420px;
+    margin-left: -325px;
     color: #2e8bc5;
     cursor: pointer;
+    width: 300px;
 }
 
 .footer-container {
@@ -445,7 +455,7 @@ label {
 .col1 img {
     width: 200px;
     height: auto;
-    margin-bottom: 30px;
+    padding: 5px;
 }
 
 .footer-container h3 {
@@ -477,6 +487,7 @@ label {
 
 .social-links i {
     margin-right: 7px;
+    color:#2e8bc5;
 }
 
 .contact ul li {
@@ -494,67 +505,73 @@ label {
 }
 
 @media (max-width: 1440px) {
-.add {
-    margin-left: 15px;
-    padding: 5px 0;
-    font-size: 1.5rem;
-    border-bottom: 1px solid #ccc;
+    .add {
+        margin-left: 15px;
+        padding: 5px 0;
+        font-size: 1.5rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 30px;
+        background-color: #fff;
+        height: 45vh;
+        padding: 15px;
+    }
+
+    #cartTable {
+        margin: 5 auto;
+        width: 95%;
+        border-collapse: collapse;
+        height: 35vh;
+        overflow-y: auto;
+        display: block;
+        border: none;
+    }
+
+    #cartTable thead,
+    #cartTable tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .empty-row td {
+        text-align: center;
+        color: gray;
+        height: 140px;
+    }
+
+    .totalPrice {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: green;
+        text-align: left;
+        position: sticky;
+        bottom: 0;
+        background: #fff;
+        padding: 5px 0;
+    }
+
+
+    .book-now {
+        margin-top: 5px;
+        border-radius: 30px;
+        background-color: #fff;
+        height: 34vh;
+        object-fit: contain;
+    }
+
+    .book-now button {
+        margin: 10px auto;
+    }
 }
 
-.cart {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 30px;
-    background-color: #fff;
-    height: 45vh;
-    padding: 15px;
-}
-
-#cartTable {
-    margin: 5 auto;
-    width: 95%;
-    border-collapse: collapse;
-    height: 35vh;
-    overflow-y: auto;
-    display: block; 
-    border: none;
-}
-
-#cartTable thead,
-#cartTable tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-
-.empty-row td {
-    text-align: center;
-    color: gray;
-    height: 140px;
-}
-
-.totalPrice {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: green;
-    text-align: left;
-    position: sticky;
-    bottom: 0;
-    background: #fff;
-    padding: 5px 0;
-}
-
-
-.book-now {
-    margin-top: 5px;
-    border-radius: 30px;
-    background-color: #fff;
-    height: 34vh;
-    object-fit: contain;
-}
-
-.book-now button{
-    margin: 10px auto;
-}
+.footer-img{
+   background-color: #eee;
+   width: fit-content;
+   border-radius: 30px;
 }
