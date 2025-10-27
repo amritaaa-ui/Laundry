@@ -142,6 +142,7 @@ body {
     height: 80vh;
     padding-right: 30px;
     border-radius: 30px;
+    overflow: auto;
 }
 
 .right-div {
@@ -184,8 +185,9 @@ body {
 }
 
 .more-info {
-    margin: 10px 0 0 25px;
-    padding-top: 15px;
+    margin-top: -10px;
+    margin-left: 20px;
+    padding: 10px;
     border-top: 1px solid #ccc;
     color: blue;
 }
@@ -206,7 +208,6 @@ td {
     border: 1px solid rgba(0, 0, 0, 0.134);
     border-collapse: collapse;
     padding: 8px;
-    text-align: center;
 }
 
 
@@ -217,36 +218,62 @@ th {
 
 .add {
     margin-left: 15px;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 1.5rem;
+    border-bottom: 1px solid #ccc;
 }
 
 .cart {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     border-radius: 30px;
     background-color: #fff;
     height: 45vh;
+    padding: 15px;
 }
 
 #cartTable {
-    margin: 0 auto;
+    margin: 5 auto;
     width: 95%;
-    height: 75%;
+    border-collapse: collapse;
+    height: 35vh;
+    overflow-y: auto;
+    display: block; 
+    border: none;
 }
 
-.book-now {
-    margin-top: 10px;
-    border-radius: 30px;
-    background-color: #fff;
-    height: 34vh;
+#cartTable thead,
+#cartTable tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.empty-row td {
+    text-align: center;
+    color: gray;
+    height: 140px;
 }
 
 .totalPrice {
     margin-top: 10px;
-    margin-left: 15px;
     font-size: 1rem;
     color: green;
+    text-align: left;
     position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 5px 0;
+}
+
+
+.book-now {
+    margin-top: 5px;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 34vh;
+    object-fit: contain;
 }
 
 .book-now h3 {
@@ -257,7 +284,8 @@ th {
 }
 
 form {
-    margin: 30px;
+    margin-left: 16px;
+    margin-top: 6px;
 }
 
 form div {
@@ -268,13 +296,14 @@ form div {
 #contact {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
 }
 
 input[type=text] {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     height: 30px;
     padding: 5px;
+    width: 90%;
 }
 
 
@@ -291,7 +320,7 @@ label {
 .book-now button {
     position: relative;
     left: 35%;
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 10px 30px;
     border-radius: 30px;
     border: none;
@@ -370,7 +399,7 @@ label {
     text-align: center;
 }
 
-.newsletter form{
+.newsletter form {
     align-items: start;
 }
 
@@ -404,60 +433,128 @@ label {
     cursor: pointer;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: space-evenly;
     height: 35vh;
-    align-items: center;
-    background-color: #ccc;
+    padding-top: 5%;
+    background-color: #333;
+    color: #ccc;
 }
 
-.col1 img{
+.col1 img {
     width: 200px;
     height: auto;
     margin-bottom: 30px;
 }
 
-.footer-container h3{
-    color: #320A6B;
+.footer-container h3 {
     border-bottom: 1px solid gray;
-    padding-bottom: 5px ;
+    padding-bottom: 5px;
 }
 
-.col1 p{
+.col1 p {
     margin-top: 10px;
 }
-.imp-links ul{
+
+.imp-links ul {
     list-style: none;
     margin-top: 5px;
 }
 
-.imp-links ul li{
+.imp-links ul li {
     margin-bottom: 3px;
 }
 
-.imp-links ul li a{
+.imp-links ul li a {
     text-decoration: none;
-    color: #3396D3;
+    color: #f2f2f2;
 }
 
-.social-links h3{
+.social-links h3 {
     margin-bottom: 15px;
 }
 
-.social-links i{
+.social-links i {
     margin-right: 7px;
 }
 
-.contact ul li{
+.contact ul li {
     margin-bottom: 5px;
 }
 
-.contact ul li a{
+.contact ul li a {
     padding: 10px;
+    color: #f2f2f2;
     text-decoration: none;
 }
 
-.contact h3{
-    margin-bottom:7px;
+.contact h3 {
+    margin-bottom: 7px;
+}
+
+@media (max-width: 1440px) {
+.add {
+    margin-left: 15px;
+    padding: 5px 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 45vh;
+    padding: 15px;
+}
+
+#cartTable {
+    margin: 5 auto;
+    width: 95%;
+    border-collapse: collapse;
+    height: 35vh;
+    overflow-y: auto;
+    display: block; 
+    border: none;
+}
+
+#cartTable thead,
+#cartTable tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.empty-row td {
+    text-align: center;
+    color: gray;
+    height: 140px;
+}
+
+.totalPrice {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: green;
+    text-align: left;
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 5px 0;
+}
+
+
+.book-now {
+    margin-top: 5px;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 34vh;
+    object-fit: contain;
+}
+
+.book-now button{
+    margin: 10px auto;
+}
 }

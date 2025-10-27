@@ -1,33 +1,35 @@
+// ✅ Add to cart or remove from cart
 function addToCart(button, item, price) {
-    let cartBody = document.getElementById("cartBody"); // tbody not whole table
+    let cartBody = document.getElementById("cartBody"); // tbody, not full table
 
-    if (button.innerText === "Add To Cart +") {
+    if (button.innerText.trim() === "Add To Cart +") {
         // remove empty row if exists
-        let emptyRow = cartBody.querySelector(".empty-row");
-        if (emptyRow) {
-            emptyRow.remove();
-        }
+        const emptyRow = cartBody.querySelector(".empty-row");
+        if (emptyRow) emptyRow.remove();
 
         // add new row
-        let row = cartBody.insertRow();
-        row.setAttribute("data-item", item);
-        row.setAttribute("data-price", price);
+        const row = cartBody.insertRow();
+        row.dataset.item = item;
+        row.dataset.price = price;
 
-        row.insertCell(0).innerText = item;
-        row.insertCell(1).innerText = "₹" + price;
+
+        const itemCell = row.insertCell(0);
+        const priceCell = row.insertCell(1);
+
+        itemCell.innerText = item;
+        priceCell.innerText = "₹" + price;
 
         // update button
         button.innerText = "Remove from Cart -";
         button.style.color = "red";
-    } else {
+    } 
+    else {
         // remove row
-        let rows = cartBody.rows;
-        for (let i = 0; i < rows.length; i++) {
-            if (rows[i].getAttribute("data-item") === item) {
-                cartBody.deleteRow(i);
-                break;
+        [...cartBody.rows].forEach((r) => {
+            if (r.dataset.item === item) {
+                r.remove();
             }
-        }
+        });
 
         // restore button
         button.innerText = "Add To Cart +";
@@ -35,12 +37,12 @@ function addToCart(button, item, price) {
 
         // if cart empty → show message row
         if (cartBody.rows.length === 0) {
-            let emptyRow = cartBody.insertRow();
+            const emptyRow = cartBody.insertRow();
             emptyRow.classList.add("empty-row");
-            let cell = emptyRow.insertCell(0);
+            const cell = emptyRow.insertCell(0);
             cell.colSpan = 2;
-            cell.style.textAlign = "center";
             cell.style.color = "gray";
+            cell.style.textAlign = "center";
             cell.innerText = "No items added yet";
         }
     }
@@ -48,25 +50,18 @@ function addToCart(button, item, price) {
     calculateTotal();
 }
 
-
+// ✅ Calculate total price
 function calculateTotal() {
-
-    const cartItems = document.querySelectorAll('#cartTable tr[data-item]');
-
+    const cartItems = document.querySelectorAll("#cartBody tr[data-item]");
     let total = 0;
 
-    cartItems.forEach(itemRow => {
-
-        const price = parseFloat(itemRow.getAttribute('data-price'));
-        if (!isNaN(price)) {
-            total += price;
-        }
+    cartItems.forEach(row => {
+        const price = parseFloat(row.dataset.price);
+        if (!isNaN(price)) total += price;
     });
 
-
-    document.getElementById('totalPrice').textContent = `₹${total.toFixed(2)}`;
+    document.getElementById("totalPrice").textContent = `₹${total.toFixed(2)}`;
 }
-
 
 function showToast(message) {
     const container = document.getElementById('toast-container');
