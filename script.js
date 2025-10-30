@@ -1,13 +1,12 @@
-// ✅ Add to cart or remove from cart
+
 function addToCart(button, item, price) {
-    let cartBody = document.getElementById("cartBody"); // tbody, not full table
+    let cartBody = document.getElementById("cartBody");
 
     if (button.innerText.trim() === "Add To Cart +") {
-        // remove empty row if exists
+
         const emptyRow = cartBody.querySelector(".empty-row");
         if (emptyRow) emptyRow.remove();
 
-        // add new row
         const row = cartBody.insertRow();
         row.dataset.item = item;
         row.dataset.price = price;
@@ -19,23 +18,22 @@ function addToCart(button, item, price) {
         itemCell.innerText = item;
         priceCell.innerText = "₹" + price;
 
-        // update button
         button.innerText = "Remove from Cart -";
         button.style.color = "red";
-    } 
+    }
     else {
-        // remove row
+
         [...cartBody.rows].forEach((r) => {
             if (r.dataset.item === item) {
                 r.remove();
             }
         });
 
-        // restore button
+
         button.innerText = "Add To Cart +";
         button.style.color = "darkgreen";
 
-        // if cart empty → show message row
+
         if (cartBody.rows.length === 0) {
             const emptyRow = cartBody.insertRow();
             emptyRow.classList.add("empty-row");
@@ -50,7 +48,7 @@ function addToCart(button, item, price) {
     calculateTotal();
 }
 
-// ✅ Calculate total price
+
 function calculateTotal() {
     const cartItems = document.querySelectorAll("#cartBody tr[data-item]");
     let total = 0;
@@ -95,7 +93,7 @@ function showToast(message) {
 
 document.getElementById("book-now").addEventListener("click", function () {
     emailjs.send("service_t6n0y5i", "template_5sb54jc", {
-        to_name: "Amrita",       // Your name
+        to_name: "Amrita",
         from_name: "Website User",
         message: "Thank you for booking our service!"
     })

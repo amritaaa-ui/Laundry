@@ -34,6 +34,7 @@ body {
     list-style: none;
     gap: 40px;
     font-size: 1.1rem;
+
 }
 
 .nav-links li a {
@@ -41,7 +42,7 @@ body {
     padding: 7px 10px;
     border-radius: 30px;
     text-align: center;
-    color: black;
+    color: white;
     transition: all 0.3s ease;
 }
 
@@ -170,17 +171,19 @@ body {
     justify-content: space-between;
     margin-left: 10px;
     padding: 25px 0;
+    text-align: center;
+    align-items: center;
 }
 
-.services{
-    height: 1vh;
-}
+
 
 .services-list {
     margin: 20px 0 0 10px;
     list-style: none;
     height: 55vh;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    text-align: center;
+    align-items: center;
 }
 
 .services-list button {
@@ -193,8 +196,9 @@ body {
 }
 
 .more-info {
-    margin-top: 10px;
+    margin-top: 35px;
     margin-left: 20px;
+    border-top: 1px solid #ccc;
     padding: 10px;
     color: blue;
 }
@@ -284,7 +288,7 @@ th {
 }
 
 .book-now h3 {
-    margin: 0 15px 0 15px;
+    margin: 0 15px;
     padding: 10px;
     font-size: 1.5rem;
     border-bottom: 1px solid gray;
@@ -326,8 +330,8 @@ label {
 
 .book-now button {
     position: relative;
-    left: 35%;
-    margin: 30px auto;
+    left: 32%;
+    margin-top: 30px;
     padding: 10px 30px;
     border-radius: 30px;
     border: none;
@@ -338,6 +342,7 @@ label {
     cursor: pointer;
     transition: all 0.3s ease;
     color: white;
+
 }
 
 .book-now button:hover {
@@ -458,6 +463,12 @@ label {
     padding: 5px;
 }
 
+.footer-img {
+    background-color: #eee;
+    width: fit-content;
+    border-radius: 10px;
+}
+
 .footer-container h3 {
     border-bottom: 1px solid gray;
     padding-bottom: 5px;
@@ -487,7 +498,7 @@ label {
 
 .social-links i {
     margin-right: 7px;
-    color:#2e8bc5;
+    color: #2e8bc5;
 }
 
 .contact ul li {
@@ -510,6 +521,10 @@ label {
         padding: 5px 0;
         font-size: 1.5rem;
         border-bottom: 1px solid #ccc;
+    }
+
+    .more-info {
+        margin-top: 10px;
     }
 
     .cart {
@@ -566,12 +581,18 @@ label {
     }
 
     .book-now button {
-        margin: 10px auto;
+        margin: 15px auto;
     }
+
+    .services-list div {
+        padding: 15px 0;
+        overflow: hidden;
+    }
+
+    .book-now h3 {
+        padding: 3px;
+    }
+
+
 }
 
-.footer-img{
-   background-color: #eee;
-   width: fit-content;
-   border-radius: 30px;
-}
