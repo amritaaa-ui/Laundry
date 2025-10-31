@@ -13,7 +13,6 @@ function addToCart(button, item, price) {
 
         const itemCell = row.insertCell(0);
         const priceCell = row.insertCell(1);
-        priceCell.style.alignItems = "center";
 
         itemCell.innerText = item;
         priceCell.innerText = "₹" + price;
@@ -134,26 +133,26 @@ document.getElementById("book-now").addEventListener("click", function () {
 
 
     const cartBody = document.getElementById("cartBody");
-            cartBody.innerHTML = `
+    cartBody.innerHTML = `
                 <tr class="empty-row">
                     <td colspan="2" style="color: gray; text-align: center;">
                         No items added yet
                     </td>
                 </tr>
             `;
-            document.getElementById("totalPrice").textContent = "₹0.00";
+    document.getElementById("totalPrice").textContent = "₹0.00";
 
 
-            document.querySelectorAll('button').forEach(btn => {
-                if (btn.innerText.trim() === "Remove from Cart -") {
-                    btn.innerText = "Add To Cart +";
-                    btn.style.color = "darkgreen";
-                }
-            });
+    document.querySelectorAll('button').forEach(btn => {
+        if (btn.innerText.trim() === "Remove from Cart -") {
+            btn.innerText = "Add To Cart +";
+            btn.style.color = "darkgreen";
+        }
+    });
 
-            document.getElementById('name').value = "";
-            document.getElementById('email').value = "";
-            document.getElementById('ph-num').value = "";
+    document.getElementById('name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('ph-num').value = "";
 
-        },
-    );
+},
+);
