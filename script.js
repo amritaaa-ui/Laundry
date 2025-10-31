@@ -1,4 +1,3 @@
-
 function addToCart(button, item, price) {
     let cartBody = document.getElementById("cartBody");
 
@@ -62,25 +61,31 @@ function calculateTotal() {
 }
 
 function showToast(message) {
-    const container = document.getElementById('toast-container');
-    const toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.innerText = message;
-    container.appendChild(toast);
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phoneNumber = document.getElementById('ph-num').value.trim();
 
 
-    setTimeout(() => {
-        toast.classList.add('show');
-    }, 10);
-
-
-    setTimeout(() => {
-        toast.classList.remove('show');
+    if (name && email && phoneNumber) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerText = message;
+        container.appendChild(toast);
 
         setTimeout(() => {
-            container.removeChild(toast);
-        }, 500);
-    }, 3000);
+            toast.classList.add('show');
+        }, 10);
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                container.removeChild(toast);
+            }, 500);
+        }, 3000);
+    } else {
+        alert("Please input the required data to proceed.");
+    }
 }
 
 
@@ -92,15 +97,37 @@ function showToast(message) {
 
 
 document.getElementById("book-now").addEventListener("click", function () {
-    emailjs.send("service_t6n0y5i", "template_5sb54jc", {
-        to_name: "Amrita",
-        from_name: "Website User",
-        message: "Thank you for booking our service!"
-    })
-        .then(function (response) {
-            alert("Confirmation email sent!");
-        }, function (error) {
-            alert("Oops, email failed. You probably typed something wrong");
-            console.log("FAILED...", error);
-        });
+
+    const cartItems = document.querySelectorAll("#cartBody tr[data-item]");
+    let itemsList = "";
+    let total = 0;
+
+
+    cartItems.forEach(row => {
+        const itemName = row.dataset.item;
+        const itemPrice = parseFloat(row.dataset.price);
+        itemsList += `${itemName} - ₹${itemPrice.toFixed(2)}\n`;
+        total += itemPrice;
+    });
+
+
+    let email2 = document.getElementById('email').value;
+    console.log(email2);
+    let templateParams = {
+        name: "Spongebob",
+        message: `Thank you for booking our service!\n\n
+        Here are your booked items:\n\n
+        ${itemsList}\n
+        Total: ₹${total.toFixed(2)}`,
+        email: email2,
+    };
+
+    emailjs.send("service_t6n0y5i", "template_5sb54jc", templateParams).then(
+        (response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+            console.log('FAILED...', error);
+        },
+    );
 });
