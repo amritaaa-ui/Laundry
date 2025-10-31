@@ -234,6 +234,10 @@ th {
     border-bottom: 1px solid #ccc;
 }
 
+#cartBody td:nth-child(2) {
+    text-align: center;
+}
+
 .cart {
     display: flex;
     flex-direction: column;
@@ -268,7 +272,6 @@ th {
 }
 
 .totalPrice {
-    margin: 0 auto;
     font-size: 1rem;
     color: green;
     text-align: left;
@@ -277,6 +280,7 @@ th {
     background: #fff;
     padding: 5px 0;
 }
+
 
 
 .book-now {
