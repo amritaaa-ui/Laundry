@@ -114,7 +114,7 @@ document.getElementById("book-now").addEventListener("click", function () {
     let email2 = document.getElementById('email').value;
     console.log(email2);
     let templateParams = {
-        name: "Spongebob",
+        name: "User",
         message: `Thank you for booking our service!\n\n
         Here are your booked items:\n\n
         ${itemsList}\n
