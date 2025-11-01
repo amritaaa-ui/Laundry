@@ -13,50 +13,61 @@ body {
 }
 
 .navbar {
-    padding: 30px;
-    height: 8.5vh;
-    width: 100%;
-    /* border-bottom:2px solid #000B58; */
-    background-color: #5497ad;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 20px 30px;
+  height: 8.5vh;
+  width: 100%;
+  background-color: #5497ad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .logo {
-    height: auto;
-    width: 150px;
-    margin-left: 30px;
+  width: 150px;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    font-size: 1.1rem;
-
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  font-size: 1.1rem;
 }
 
 .nav-links li a {
-    text-decoration: none;
-    padding: 7px 10px;
-    border-radius: 30px;
-    text-align: center;
-    color: white;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  padding: 7px 10px;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .nav-links li a:hover {
-    background-color: #aab2c8;
+  background-color: #aab2c8;
 }
 
 .username {
-    background-color: #F5EFE6;
-    padding: 10px;
-    border-radius: 30px;
-    cursor: pointer;
+  background-color: #F5EFE6;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
 .hero-section {
     display: flex;
     height: 76vh;
@@ -275,7 +286,7 @@ th {
     font-size: 1rem;
     color: green;
     text-align: left;
-    position: sticky;
+    /* position: sticky; */
     bottom: 0;
     background: #fff;
     padding: 5px 0;
@@ -576,7 +587,7 @@ label {
         font-size: 1rem;
         color: green;
         text-align: left;
-        position: sticky;
+        /* position: sticky; */
         bottom: 0;
         background: #fff;
         padding: 5px 0;
