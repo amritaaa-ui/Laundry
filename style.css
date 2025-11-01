@@ -69,55 +69,59 @@ body {
   border-radius: 2px;
 }
 .hero-section {
-    display: flex;
-    height: 76vh;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 76vh;
+  padding: 0 40px;
 }
 
 .details h1 {
-    font-size: 3.5rem;
-    position: relative;
-    left: -100px;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+  font-size: 3.5rem;
+  position: relative;
+  left: -100px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .details span {
-    color: #3396D3;
+  color: #3396D3;
 }
 
 .details p {
-    position: relative;
-    left: -100px;
-    font-size: 1.2rem;
+  position: relative;
+  left: -100px;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .details button {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 30px;
-    border: none;
-    background-color: #3396D3;
-    width: 250px;
-    position: relative;
-    left: -100px;
-    font-size: medium;
-    font-weight: 700;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #3396D3;
+  width: 250px;
+  position: relative;
+  left: -100px;
+  font-size: medium;
+  font-weight: 700;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  color: white;
 }
 
 .details button:hover {
-    transform: translateY(-5px);
-    background-color: #2e8bc5;
+  transform: translateY(-5px);
+  background-color: #2e8bc5;
 }
 
 .hero-image {
-    height: 600px;
-    position: relative;
-    right: -80px;
+  height: 600px;
+  position: relative;
+  right: -80px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .overview-section {
@@ -603,7 +607,7 @@ label {
     }
 
     .book-now button {
-        margin: 15px auto;
+        margin: 13px auto;
     }
 
     .services-list div {
